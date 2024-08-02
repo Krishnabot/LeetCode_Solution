@@ -1,10 +1,11 @@
+#use a single index i to keep track of the position where the next non-val element should be placed
 def remove_element(nums, val)
-  k = 0
+  i = 0
   nums.each do |num|
     if num != val
-      nums[k] = num
-      k += 1
+      nums[i] = num
+      i += 1
     end
   end
-  return k
+  return i
 end
