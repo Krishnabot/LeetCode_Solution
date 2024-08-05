@@ -1,15 +1,18 @@
+# try to reduce the number of operations
+# try to avoids using additional variables
 def length_of_last_word(s)
   length = 0
-  in_word = false
+  i = s.length - 1
 
-  # Traverse the string from the end to the beginning
-  (s.length - 1).downto(0) do |i|
-    if s[i] != ' '
-      length += 1
-      in_word = true
-    elsif in_word
-      break
-    end
+  # skip trailing spaces
+  while i >= 0 && s[i] == ' '
+    i -= 1
+  end
+
+  # length of the last word
+  while i >= 0 && s[i] != ' '
+    length += 1
+    i -= 1
   end
 
   length
