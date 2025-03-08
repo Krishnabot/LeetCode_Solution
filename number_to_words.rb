@@ -1,5 +1,5 @@
 def number_to_words(num)
-  # Define Arrays:
+# Define Arrays:
 # less_than_20: Array of words for numbers 0 to 19.
 # tens: Array of words for multiples of ten from 10 to 90.
 # thousands: Array of words for thousand, million, billion.
